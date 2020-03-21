@@ -1,0 +1,203 @@
+*{font-family:"Courier New";}
+body{
+  background-color: #FFF;
+}
+h1 {text-align: center; font-size: 3em; color: #008CBA;}
+.card{
+  background-color:#FFF;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+#second-div{
+  text-align:center;
+  font-size:1.2em;
+  margin-left: auto;  margin-right: auto;
+  width: 500px;
+  padding: 10px;
+}
+.restart{
+  padding:3%;
+  padding-top:25px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width:40%;
+  display:inline-block;
+  background-color:#FFF;
+}
+
+*.unselectable {
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+
+/*layout for desktop*/
+#layout-div {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+/*button css*/
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+/*mobile layout*/
+@media (orientation: portrait) {
+
+  #low{
+    text-align:center;
+    font-size:2.5em;
+    margin-left: auto;  margin-right: auto;
+    margin-top:10px;
+    width: 80%;
+    padding: 10px;
+  }
+  h1{
+      font-size:5em;
+  }
+}
+body{
+  font-family: Avenir, Heveltica, sans-serif;
+}
+
+/*sudoku table layout*/
+li:nth-child(n):nth-child(-n+9) {
+  border-top-width: 4px;
+}
+li:nth-child(n+73):nth-child(-n+81) {
+  border-bottom-width: 4px;
+}
+li:nth-child(3n) {
+  border-right-width: 4px;
+}
+li:nth-child(9n+1) {
+  border-left-width: 4px;
+}
+li:nth-child(n+19):nth-child(-n+27) {
+  border-bottom-width: 4px;
+}
+li:nth-child(n+46):nth-child(-n+54) {
+  border-bottom-width: 4px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(9, 5vw);
+  grid-template-rows: repeat(9, 5vw);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 0rem;
+  list-style: none;
+  margin: 0 0 2vw;
+  padding: 0;
+  font-size: calc(2vw + 10px);
+}
+li {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span {
+    margin-top: 0.2rem;
+  }  
+}
+li.fijo{
+  color: #008CBA;
+}
+.note {
+  background: #ddd;
+  font-family: monospace;
+  padding: 2em 5em;
+  font-size: 120%;
+  order: -1;
+}
+
+@supports (display:grid) {
+  .note {display:none;}
+}
+
+/*Difficulty selector*/
+#difficulty_div{
+  margin-top: 20px;
+  font-size: 1em;
+  display: block;
+}
+
+#difficulty_div.hidden{
+  display: none;
+}
+
+.slider {
+ -webkit-appearance: none;
+ width: auto;
+ height: 15px;
+ border-radius: 5px;
+ background: #d3d3d3;
+ outline: none;
+ opacity: 0.7;
+ -webkit-transition: .2s;
+ transition: opacity .2s;
+}
+
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #7889d6;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #7889d6;
+  cursor: pointer;
+}
+

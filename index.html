@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sudoku solver</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="https://toppng.com/uploads/preview/sudoku-puzzle-math-riddle-svg-png-icon-free-download-sudoku-ico-11563140156orc062ki7s.png">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script type="text/javascript" src="javascript/DNA.js"></script>
+    <script type="text/javascript" src="javascript/Population.js"></script>
+    <script type="text/javascript" src="javascript/sudoku.js"></script>
+    <script type="text/javascript" src="javascript/behaviour.js"></script>
+  </head>
+  <body>
+    <div id="layout-div">
+      <div  id="main-div">
+      
+        <ul id="sudoku-table">
+          <li><span>1</span></li>
+          <li><span>2</span></li>
+          <li><span>3</span></li>
+          <li><span>1</span></li>
+          <li><span>2</span></li>
+          <li><span>3</span></li>
+          <li><span>1</span></li>
+          <li><span>2</span></li>
+          <li><span>3</span></li>
+          <li><span>4</span></li>
+          <li><span>5</span></li>
+          <li><span>6</span></li>
+          <li><span>4</span></li>
+          <li><span>5</span></li>
+          <li><span>6</span></li>
+          <li><span>4</span></li>
+          <li><span>5</span></li>
+          <li><span>6</span></li>
+          <li><span>7</span></li>
+          <li><span>8</span></li>
+          <li><span>9</span></li>
+          <li><span>7</span></li>
+          <li><span>8</span></li>
+          <li><span>9</span></li>
+          <li><span>7</span></li>
+          <li><span>8</span></li>
+          <li><span>9</span></li>
+          <li><span>1</span></li>
+          <li><span>2</span></li>
+          <li><span>3</span></li>
+          <li><span>1</span></li>
+          <li><span>2</span></li>
+          <li><span>3</span></li>
+          <li><span>1</span></li>
+          <li><span>2</span></li>
+          <li><span>3</span></li>
+          <li><span>4</span></li>
+          <li><span>5</span></li>
+          <li><span>6</span></li>
+          <li><span>4</span></li>
+          <li><span>5</span></li>
+          <li><span>6</span></li>
+          <li><span>4</span></li>
+          <li><span>5</span></li>
+          <li><span>6</span></li>
+          <li><span>7</span></li>
+          <li><span>8</span></li>
+          <li><span>9</span></li>
+          <li><span>7</span></li>
+          <li><span>8</span></li>
+          <li><span>9</span></li>
+          <li><span>7</span></li>
+          <li><span>8</span></li>
+          <li><span>9</span></li>
+          <li><span>1</span></li>
+          <li><span>2</span></li>
+          <li><span>3</span></li>
+          <li><span>1</span></li>
+          <li><span>2</span></li>
+          <li><span>3</span></li>
+          <li><span>1</span></li>
+          <li><span>2</span></li>
+          <li><span>3</span></li>
+          <li><span>4</span></li>
+          <li><span>5</span></li>
+          <li><span>6</span></li>
+          <li><span>4</span></li>
+          <li><span>5</span></li>
+          <li><span>6</span></li>
+          <li><span>4</span></li>
+          <li><span>5</span></li>
+          <li><span>6</span></li>
+          <li><span>7</span></li>
+          <li><span>8</span></li>
+          <li><span>9</span></li>
+          <li><span>7</span></li>
+          <li><span>8</span></li>
+          <li><span>9</span></li>
+          <li><span>7</span></li>
+          <li><span>8</span></li>
+          <li><span>9</span></li>
+        </ul>
+      <div class="note">Your browser doesn't support CSS Grid. You'll need <a href="http://gridbyexample.com/browsers/">a browser that does</a> to use this app.</div> 
+    </div>
+
+    <div id="second-div">
+      <h1>Sudoku solver</h1>
+        <div center>
+          <p class="button button1" onclick="generateNewTable()">Generate new sudoku</p>
+          <p class="button button2" onclick="solveSudoku()">Solve</p>
+          <div id="difficulty_div">
+            <label >Difficulty</label>
+            <input class="slider" type="range" id="difficulty_s" name="volume" min="1" max="3" value="1">
+            <label id="dif_label">0</label>
+          </div>
+          <p id="bestFitnessText">Best Fitness: </p>
+          <p id="averageFitnessText">Average Fitness: </p>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
